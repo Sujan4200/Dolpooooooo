@@ -1,0 +1,22 @@
+nav{
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 96px;
+    padding-top:32px;
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    z-index: 9999;
+    color: $white-color;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    /* background-color:cadetblue */
+
+    &.nav__sticky {
+        background-color: $nav-color;
+        // box-shadow: 0  7px 7px rgba(0, 0, 0, 0.237);
+    
+    }
+}

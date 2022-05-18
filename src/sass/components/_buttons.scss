@@ -1,0 +1,18 @@
+
+.btn:link,
+.btn:visited{
+    font-size: 20px ;
+    font-weight: 600;
+    background-color: $nav-color;
+    color: $white-color;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 9px;
+    transition: all .2s ease-in;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+

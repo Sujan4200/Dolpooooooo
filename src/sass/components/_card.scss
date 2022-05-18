@@ -1,0 +1,132 @@
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 35px;
+}
+
+.card{
+    height: 500px;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+    perspective: 1000px;
+
+
+    &:hover  &-inner{
+        /* box-shadow: 0px 0px 10px 10px rgba(0, 0,0, .3);
+        transform: translateY(-8px);
+        border: none; */
+        transform:rotateY(180deg);
+    }
+
+
+    &-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+           
+    }
+
+    &-front  &-back{    
+        position: absolute;
+        width: 100%;
+        height:100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    
+    }
+            &-front{
+            background-color: $white-color;
+            color: $black-color;
+                    }
+
+
+                &-back{
+                        background-color: $card-back-color;
+                        color:$white-color;
+                        transform: rotateY(180deg);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 75%;
+                        width: 100%;
+
+
+         &-content{
+        font-size: 28px ;
+        font-weight: 500;
+        padding: 20px;
+    }
+}
+
+        &-img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    
+    
+        }
+        &-title{
+    font-size: 28px;
+    font-weight: 500;
+    padding: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $background-color-title;
+    width: 100%;
+    color: $white-color;
+
+}
+
+
+
+
+
+    &__modal {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    &__modal--backdrop {
+        height: 100%;
+        width: 100%;
+        background-color:$modal-backdrop ;
+    
+    }
+    &__modal--img {
+        height: 75%;
+        width: 75%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+    }
+    &__modal--cross {
+        position: absolute;
+        top: 70px;
+        right: 70px;
+        color: $white-color;
+        cursor: pointer;
+        font-size: 40px;
+    }
+    &__modal--none {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+}
+

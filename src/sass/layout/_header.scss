@@ -1,0 +1,21 @@
+.header{
+
+    height:100vh;
+    /* background-color: antiquewhite; */
+    position: relative;
+    background-image: url('../../images/33.JPG');
+    background-size: cover;
+    background-position: bottom;
+    color: $white-color;   
+}
+
+.header-container{
+    width:100%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  
+    padding: 0 96px;
+ 
+}
