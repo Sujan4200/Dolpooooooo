@@ -1,15 +1,5 @@
 pipeline {
-    agent { 
-	docker {
-	     image 'react-app/dolpoo:1.0'
-	     args '-p 3000:3000'
-		}
-	}
-
-	environment {
-		CI = 'true'
-
-	}
+    agent any
 	
 
     stages {
