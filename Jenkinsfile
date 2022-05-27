@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage ("Build") {
             steps{
-		sh 'node install'
+		
 		sh 'npm install'
                 echo "Build succesfull"
             }
