@@ -1,11 +1,20 @@
 pipeline {
-    agent any
+    agent { 
+	docker {
+	     image 'react-app/dolpoo:1.0'
+	     args '-p 3000:3000'
+		}
+	}
+
+	environment {
+		CI = 'true'
+
+	}
 	
 
     stages {
         stage ("Build") {
             steps{
-		
 		sh 'npm install'
                 echo "Build succesfull"
             }
