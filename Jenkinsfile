@@ -1,7 +1,7 @@
 pipeline {
     agent { 
 	docker {
-	     image 'react-app/dolpoo:1.0'
+	     image 'dolpo:1.0'
 	     args '-p 3000:3000'
 		}
 	}
