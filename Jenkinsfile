@@ -10,7 +10,7 @@ pipeline {
 
     }
 
-    agent demo-slave
+    agent any
 
     stages { 
 
