@@ -10,7 +10,7 @@ pipeline {
 6
     }
 7
-    agent any 
+    agent demo-slave
 8
     stages { 
 9
