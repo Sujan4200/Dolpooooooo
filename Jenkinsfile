@@ -14,9 +14,9 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps{
-                scripts{
+                
                     sh 'docker build -t niklaus07/dolpooo . '
-                }
+                
             }
         }
          stage ('Push Docker image') {
