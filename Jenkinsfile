@@ -8,7 +8,7 @@ pipeline {
         stage('Build React App') { 
             steps { 
                 sh 'npm install'
-                sh 'npm build ' 
+                 
             } 
         }
         stage('Build Docker Image') {
@@ -24,7 +24,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'niklaus07', variable: 'dockerhub')]) {
                     sh 'docker login -u niklaus07 -p ${dockerhub}'
                 }
-                    sh 'docker push niklaus07/my-app-1.0'
+                    sh 'docker push niklaus07/dolpooo'
                 }
             }
         }
